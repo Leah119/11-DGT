@@ -27,12 +27,24 @@ start=input("Would you like to begin?")
 
 if start == "Yes" or start == "yes":
     print("sweet")
-    
+
 if start == "No" or start == "no":
     print("mm")
 
 else:
-    while start != "No":
-        print("Please enter either 'Yes' or 'No'")
-        start = input("Would you like to begin?")
-          
+    print("Please enter either 'Yes' or 'No'")
+    start = input("Would you like to begin?")
+
+print("Let us begin!")
+
+questions = 10
+level = 0
+
+print (questions)
+print(level)
+
+for x in range (questions):
+    ans=input(Ques[level])
+    if ans == Cor_ans[level]:
+        print("Congrats, that is correct!")
+        level += 1
