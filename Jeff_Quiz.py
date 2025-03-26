@@ -16,6 +16,7 @@ Cor_ans = [["Jeff Bezos", "Jeffrey Bezos", "Bezos"],
            ["Jeffrey Dahmer", "Jeff Dahmer", "Dahmer"],
            ["Jeff Buckley", "Jeffrey Buckley", "Buckley"],
            ["A car", "car", "a car", "racecar", "a racecar"],
+           ["Jeff Gordon", "Jeffrey Gordon", "Gordon"],
            ["22 Jump Street", "22 jump street"],
            ["Jeff Bridges", "Jeffrey Bridges", "Bridges"],
            ["Geoffrey", "Jeffry", "Jefferey", "Jefrie", "Geffrey"],
@@ -28,14 +29,15 @@ start=input("Would you like to begin?")
 if start == "Yes" or start == "yes":
     print("sweet")
 
-if start == "No" or start == "no":
+elif start == "No" or start == "no":
     print("mm")
 
-else:
+while start != "Yes" and start != "No" and start != "yes" and start != "no":
     print("Please enter either 'Yes' or 'No'")
     start = input("Would you like to begin?")
 
 print("Let us begin!")
+print("*Disclaimer, you will need capitals for names*")
 
 questions = 10
 level = 0
@@ -45,6 +47,11 @@ print(level)
 
 for x in range (questions):
     ans=input(Ques[level])
-    if ans == Cor_ans[level]:
+    print(Cor_ans[level])
+    if ans in Cor_ans[level]:
         print("Congrats, that is correct!")
         level += 1
+    elif ans != Cor_ans[level]:
+        print("Hello?")
+        #give one more try
+        
