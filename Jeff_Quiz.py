@@ -22,6 +22,7 @@ Cor_ans = [["Jeff Bezos", "Jeffrey Bezos", "Bezos"],
            ["Geoffrey", "Jeffry", "Jefferey", "Jefrie", "Geffrey"],
            ["Germany", "germany"]]
 
+
 #Introduction:
 print("Hi there, welcome to the Jeffrey Quiz!")
 start=input("Would you like to begin?")
@@ -41,6 +42,7 @@ print("*Disclaimer, you will need capitals for names*")
 
 questions = 10
 level = 0
+attempts = 0
 
 print (questions)
 print(level)
@@ -53,5 +55,15 @@ for x in range (questions):
         level += 1
     elif ans != Cor_ans[level]:
         print("Hello?")
-        #give one more try
-        
+        while attempts <= 1 and ans != Cor_ans[level]:
+            print("Sorry, you got that wrong. You have " +
+                  str(2-attempts) + " more attempts left.")
+            ans=input(Ques[level])
+            attempts += 1
+            if attempts == 2 and ans != Cor_ans[level]:
+                print("I'm sorry, you've run out of guesses.")
+                print("The answer could have been any of these options: " +
+                      str(Cor_ans[level]))
+                attempts == 0
+                level += 1
+                break
