@@ -31,7 +31,8 @@ if start == "Yes" or start == "yes":
     print("sweet")
 
 elif start == "No" or start == "no":
-    print("mm")
+    print("Ah well, see you next time!")
+    quit()
 
 while start != "Yes" and start != "No" and start != "yes" and start != "no":
     print("Please enter either 'Yes' or 'No'")
@@ -67,3 +68,17 @@ for x in range (questions):
                 attempts == 0
                 level += 1
                 break
+            elif attempts <= 1 and ans == Cor_ans[level]:
+                print("Congrats, you got that right!")
+                attempts == 0
+                level += 1
+                break
+
+#add score element, so that we can print it at the end.
+
+
+
+#Read through the ENTIRE code before saying you're done.
+#Don't want to forget to change docstring,
+#and get rid of testing elements before submitting.
+            
