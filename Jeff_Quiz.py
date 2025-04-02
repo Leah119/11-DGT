@@ -1,5 +1,7 @@
 """Blah blah, docstring, fix later""" #actually do or this will be awkward
 
+from time import sleep
+
 Ques = ["Who created Amazon?",
         "Who played The Grandmaster?",
         "Which Jeffrey liked a lil' bit of murder?",
@@ -44,6 +46,7 @@ print("*Disclaimer, you will need capitals for names*")
 questions = 10
 level = 0
 attempts = 0
+score = 0
 
 print (questions)
 print(level)
@@ -54,6 +57,7 @@ for x in range (questions):
     if ans in Cor_ans[level]:
         print("Congrats, that is correct!")
         level += 1
+        score += 1
     elif ans != Cor_ans[level]:
         print("Hello?")
         while attempts <= 1 and ans != Cor_ans[level]:
@@ -68,17 +72,36 @@ for x in range (questions):
                 attempts == 0
                 level += 1
                 break
-            elif attempts <= 1 and ans == Cor_ans[level]:
-                print("Congrats, you got that right!")
-                attempts == 0
-                level += 1
-                break
+    elif attempts <= 1 and ans == Cor_ans[level]:
+        print("Congrats, you got that right!")
+        attempts == 0
+        level += 1
+        break
+    print(score)
+    
+if score == 10:
+    print("That's the end of The Jeff Quiz!")
+    print("Let's check your score...")
+    sleep(1.5)
+    print("Wow, congratulations, you got 100% correct!")
+    print("Thanks a lot for playing!")
+    quit()
 
+else:
+    print("That's the end of The Jeff Quiz!")
+    print("Now, what did you score out of 10?")
+    sleep(1.5)
+    print("Aw man, you got " + score + " out of 10!")
+    print("You should definetly play it again to get full marks!")
+    print("Thanks for playing!")
+    quit()
+
+ 
 #add score element, so that we can print it at the end.
+#also, remove square brackets (around answers when printed).
 
 
 
 #Read through the ENTIRE code before saying you're done.
 #Don't want to forget to change docstring,
 #and get rid of testing elements before submitting.
-            
