@@ -71,19 +71,19 @@ for x in range (questions):
                       str(Cor_ans[level]))
                 attempts == 0
                 level += 1
-                break
-    elif attempts <= 1 and ans == Cor_ans[level]:
-        print("Congrats, you got that right!")
-        attempts == 0
-        level += 1
-        break
-    print(score)
+                
+            elif attempts >=1 and ans == Cor_ans[level]:
+                print("Congrats, you got that right!")
+                print("That won't count towards your score though :(")
+                attempts == 0
+                level += 1
+                
     
 if score == 10:
     print("That's the end of The Jeff Quiz!")
     print("Let's check your score...")
     sleep(1.5)
-    print("Wow, congratulations, you got 100% correct!")
+    print("Wow, congratulations, you got 10/10 correct!")
     print("Thanks a lot for playing!")
     quit()
 
@@ -91,7 +91,7 @@ else:
     print("That's the end of The Jeff Quiz!")
     print("Now, what did you score out of 10?")
     sleep(1.5)
-    print("Aw man, you got " + score + " out of 10!")
+    print("Aw man, you got " + str(score) + " out of 10!")
     print("You should definetly play it again to get full marks!")
     print("Thanks for playing!")
     quit()
