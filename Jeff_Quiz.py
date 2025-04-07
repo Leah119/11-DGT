@@ -48,24 +48,22 @@ level = 0
 attempts = 0
 score = 0
 
-print (questions)
-print(level)
 
 for x in range (questions):
     ans=input(Ques[level])
-    print(Cor_ans[level])
     if ans in Cor_ans[level]:
         print("Congrats, that is correct!")
         level += 1
         score += 1
-    elif ans != Cor_ans[level]:
-        print("Hello?")
+    elif ans not in Cor_ans[level]:
+        # user got it wrong, second chance at question
         while attempts <= 1 and ans != Cor_ans[level]:
             print("Sorry, you got that wrong. You have " +
                   str(2-attempts) + " more attempts left.")
             ans=input(Ques[level])
             attempts += 1
-            if attempts == 2 and ans != Cor_ans[level]:
+
+            if attempts == 2 and ans not in Cor_ans[level]:
                 print("I'm sorry, you've run out of guesses.")
                 print("The answer could have been any of these options: " +
                       str(Cor_ans[level]))
