@@ -79,19 +79,21 @@ for x in range (questions):
                 level += 1
                 
     
-if score == 10:
+if score == questions:
     print("That's the end of The Jeff Quiz!")
     print("Let's check your score...")
     sleep(1.5)
-    print("Wow, congratulations, you got 10/10 correct!")
+    print("Wow, congratulations, you got " + str(score) + "/" +
+          str(questions) + " correct!")
     print("Thanks a lot for playing!")
     quit()
 
 else:
     print("That's the end of The Jeff Quiz!")
-    print("Now, what did you score out of 10?")
+    print("Now, what did you score out of " + str(questions) + " ?")
     sleep(1.5)
-    print("Aw man, you got " + str(score) + " out of 10!")
+    print("Aw man, you got " + str(score) + " out of " + str(questions) +
+          "!")
     print("You should definetly play it again to get full marks!")
     print("Thanks for playing!")
     quit()
