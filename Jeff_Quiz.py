@@ -45,13 +45,20 @@ Cor_ans = ["Bezos",
            "Pearl Jam",
            "Germany"]
 
-questions = 10
+QUESTIONS = 10
 score = 0
-# Introduction:
-easygui.msgbox("Hi, welcome the Jeffrey Quiz!")
+REQ_AGE = 10
+
+#QUESTIONS is the amount of questions the quiz runs
+#score is the base score the user starts with
+#REQ_AGE is the required age needed to play the quiz
+
+
+# Introduction - Age check + username input:
+easygui.msgbox("Hi, welcome to the Jeffrey Quiz!")
 age = easygui.integerbox("How old are you?")
 
-if age <= 10:
+if age <= REQ_AGE:
     easygui.msgbox("Sorry, you are too young for this game!")
     easygui.msgbox("Please come back when you are older :)")
     quit()
@@ -65,8 +72,8 @@ if begin is False:
     quit()
 
 
-# Questions:
-for x in range(questions):
+# Questions + checking to see if correct (and award scores):
+for x in range(QUESTIONS):
     answer = easygui.buttonbox(Ques[x], choices=Opt[x])
 
     if answer == Cor_ans[x]:
@@ -77,7 +84,7 @@ for x in range(questions):
         easygui.msgbox("Aw, better luck next time.")
 
 
-# The end of The Jeffrey Quiz:
+# The end of The Jeffrey Quiz (provides score):
 easygui.msgbox("Well done on completing The Jeff Quiz!")
 easygui.msgbox("Your score is...")
 easygui.msgbox(str(score) + " out of 10!")
