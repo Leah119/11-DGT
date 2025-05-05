@@ -54,7 +54,7 @@ REQ_AGE = 10
 #REQ_AGE is the required age needed to play the quiz
 
 
-# Introduction - Age check + username input:
+# Introduction- Age check + username input:
 easygui.msgbox("Hi, welcome to the Jeffrey Quiz!")
 age = easygui.integerbox("How old are you?")
 
@@ -87,6 +87,6 @@ for x in range(QUESTIONS):
 # The end of The Jeffrey Quiz (provides score):
 easygui.msgbox("Well done on completing The Jeff Quiz!")
 easygui.msgbox("Your score is...")
-easygui.msgbox(str(score) + " out of 10!")
+easygui.msgbox(str(score) + " out of " + str(QUESTIONS) + "!")
 easygui.msgbox("Please come back soon " + user + "!")
 quit()
