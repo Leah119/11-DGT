@@ -47,7 +47,8 @@ Cor_ans = ["Bezos",
 
 QUESTIONS = 10
 score = 0
-REQ_AGE = 10
+MIN_AGE = 14
+MAX_AGE = 18
 
 #QUESTIONS is the amount of questions the quiz runs
 #score is the base score the user starts with
@@ -58,9 +59,15 @@ REQ_AGE = 10
 easygui.msgbox("Hi, welcome to the Jeffrey Quiz!")
 age = easygui.integerbox("How old are you?")
 
-if age <= REQ_AGE:
+if age <= MIN_AGE:
     easygui.msgbox("Sorry, you are too young for this game!")
     easygui.msgbox("Please come back when you are older :)")
+    quit()
+
+elif age >= MAX_AGE:
+    easygui.msgbox("Sorry, you're too old for this game!")
+    easygui.msgbox("That must suck.")
+    easygui.msgbox("See ya!")
     quit()
 
 user = easygui.enterbox("Could you also tell me your name?")
