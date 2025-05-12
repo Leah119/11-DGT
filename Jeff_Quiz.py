@@ -11,6 +11,15 @@ It is designed so that people 10 and under can not play.
 
 import easygui
 
+QUESTIONS = 10  #is the amount of questions the quiz runs
+MIN_AGE = 14  #required age needed to play the quiz
+MAX_AGE = 18  #the cut-off age, if you're older than it you can't play
+
+COR_MSG = "That is correct!"  #message for correct answers
+BAD_MSG = "Aw, better luck next time.\nThe correct answer was '"  #incorrect
+
+
+
 Ques = ["Which Jeff created Amazon?",
         "Which Jeff played The Grandmaster?",
         "Which Jeffrey liked a lil' bit of murder?",
@@ -45,18 +54,16 @@ Cor_ans = ["Bezos",
            "Pearl Jam",
            "Germany"]
 
-QUESTIONS = 10
-score = 0
-MIN_AGE = 14
-MAX_AGE = 18
 
-#QUESTIONS is the amount of questions the quiz runs
-#score is the base score the user starts with
-#REQ_AGE is the required age needed to play the quiz
-
+score = 0    #is the base score the user starts with
 
 # Introduction- Age check + username input:
-easygui.msgbox("Hi, welcome to the Jeffrey Quiz!")
+easygui.msgbox("""Hi, welcome to the Jeffrey Quiz! \nThis quiz will test you
+               on your knowledge of Jeff-related questions""")
+easygui.msgbox("""You will be asked a question, and given four choices to
+answer with! \nDon't worry if it's incorrect, theres always
+the next question!""")
+
 age = easygui.integerbox("How old are you?")
 
 if age <= MIN_AGE:
@@ -65,12 +72,15 @@ if age <= MIN_AGE:
     quit()
 
 elif age >= MAX_AGE:
-    easygui.msgbox("Sorry, you're too old for this game!")
-    easygui.msgbox("That must suck.")
+    easygui.msgbox("Sorry, you're too old for this game!\n...That must suck.")
     easygui.msgbox("See ya!")
     quit()
 
 user = easygui.enterbox("Could you also tell me your name?")
+while user == "":
+    easygui.msgbox("You need to enter a username")
+    user = easygui.enterbox("Please tell me your name")
+    
 easygui.msgbox("Awesome! Welcome to the quiz " + user + "!")
 begin = easygui.ynbox("Shall we begin?")
 
@@ -84,16 +94,15 @@ for x in range(QUESTIONS):
     answer = easygui.buttonbox(Ques[x], choices=Opt[x])
 
     if answer == Cor_ans[x]:
-        easygui.msgbox("That is correct!")
+        easygui.msgbox(COR_MSG)
         score += 1
 
     elif answer != Cor_ans[x]:
-        easygui.msgbox("Aw, better luck next time.")
+        easygui.msgbox(BAD_MSG + Cor_ans[x] + "'.")
 
 
 # The end of The Jeffrey Quiz (provides score):
-easygui.msgbox("Well done on completing The Jeff Quiz!")
-easygui.msgbox("Your score is...")
+easygui.msgbox("Well done on completing The Jeff Quiz!\nYour score is...")
 easygui.msgbox(str(score) + " out of " + str(QUESTIONS) + "!")
 easygui.msgbox("Please come back soon " + user + "!")
 quit()
