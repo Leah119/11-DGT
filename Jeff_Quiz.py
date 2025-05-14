@@ -11,13 +11,12 @@ It is designed so that people 10 and under can not play.
 
 import easygui
 
-QUESTIONS = 10  #is the amount of questions the quiz runs
-MIN_AGE = 14  #required age needed to play the quiz
-MAX_AGE = 18  #the cut-off age, if you're older than it you can't play
+QUESTIONS = 10  # is the amount of questions the quiz runs
+MIN_AGE = 14  # required age needed to play the quiz
+MAX_AGE = 18  # the cut-off age, if you're older than it you can't play
 
-COR_MSG = "That is correct!"  #message for correct answers
-BAD_MSG = "Aw, better luck next time.\nThe correct answer was '"  #incorrect
-
+COR_MSG = "That is correct!"  # message for correct answers
+BAD_MSG = "Aw, better luck next time.\nThe correct answer was '"  # incorrect
 
 
 Ques = ["Which Jeff created Amazon?",
@@ -55,7 +54,7 @@ Cor_ans = ["Bezos",
            "Germany"]
 
 
-score = 0    #is the base score the user starts with
+score = 0    # is the base score the user starts with
 
 # Introduction- Age check + username input:
 easygui.msgbox("""Hi, welcome to the Jeffrey Quiz! \nThis quiz will test you
@@ -66,6 +65,7 @@ the next question!""")
 
 age = easygui.integerbox("How old are you?")
 
+# Enforcing age parameters:
 if age <= MIN_AGE:
     easygui.msgbox("Sorry, you are too young for this game!")
     easygui.msgbox("Please come back when you are older :)")
@@ -77,19 +77,24 @@ elif age >= MAX_AGE:
     quit()
 
 user = easygui.enterbox("Could you also tell me your name?")
+
+# Preventing invalid username:
 while user == "":
     easygui.msgbox("You need to enter a username")
     user = easygui.enterbox("Please tell me your name")
-    
+
 easygui.msgbox("Awesome! Welcome to the quiz " + user + "!")
 begin = easygui.ynbox("Shall we begin?")
 
+
+# Quit option: 
 if begin is False:
     easygui.msgbox("Ah, that's all good. See ya next time " + user + ".")
     quit()
 
 
 # Questions + checking to see if correct (and award scores):
+# for loop iterating through list: 
 for x in range(QUESTIONS):
     answer = easygui.buttonbox(Ques[x], choices=Opt[x])
 
