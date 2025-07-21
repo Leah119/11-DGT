@@ -4,21 +4,41 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <title>Home - CC Interactive Map</title>
-    </head>
-    
-    <body>
-        <header>
-            <nav>
+        <nav>
                 <a href="index.html">Home</a>
                 <a href="a.html">A Block</a>
                 <a href="b.html">B Block</a>
                 <a href="c.html">C Block</a>
-                <a href="d.html">D Block</a>
-                <a href="e.html">E Block</a>
-                <a href="t.html">T Block</a>
-                <a href="office.html">Office</a>
-                <a href="audit.html">Auditorium</a>
-                <a href="gym.html">Gym</a>
+                <a href="#">D Block</a>
+                <a href="#">E Block</a>
+                <a href="#">T Block</a>
+                <a href="#">Office</a>
+                <a href="#">Auditorium</a>
+                <a href="#">Gym</a>
             </nav>
+    </head>
+
+    <body>
+        <header>
+        <h1>WELCOME</h1>
+        <h3>To the Cromwell College interactive map</h3>
         </header>
+        <main>
+            <p> This is a map created to assist new and/or lost students at Cromwell College.</p>
+            <p>
+                It works by simply clicking onto the part of the map you would like to explore. Once you click on a building you will be taken to its page, which includes common classes and the teachers who usually work there.
+
+                If you only wish for information, and know which block you are trying to access, feel free to use the navigation bar at the top of the page.
+            </p>
+            <h3> Click any building below for information!</h3>
+            <p>**Whilst in current stage, only blocks A, B, and C are clickable**</p>
+            <img class="map"img src="College Map 2025.png" alt = "Map" usemap="#intmap">
+
+            <map name="intmap">
+                <area shape="poly" coords="356,162,425,229,380,272,307,210" href="ablock.html">
+                <area shape="poly" coords="188,251,257,251,260,346,188,345" href="bblock.html">
+                <area shape="poly" coords="40,171,213,169,214,244,38,247"
+                href="cblock.html">
+            </map>
+        </main>
     </body>
