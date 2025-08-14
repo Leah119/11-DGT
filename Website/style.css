@@ -8,11 +8,42 @@
     margin-right: 10px;
 }
 
+nav {
+    background-color: rgb(236, 236, 236);
+}
+nav a {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 9%;
+    padding: 7px 0px;
+    color:rgb(51, 34, 34);
+    font-weight: bold;
+    font-size: 15px;
+    margin: 3px;
+}
+nav a:hover {
+    color: rgb(57, 45, 41);
+    background-color: rgb(204, 204, 204);
+}
+
 body {
     background-color: rgb(189, 197, 198);
     margin-left: 10%;
     margin-right: 10%;
     
+}
+
+.ablock {
+    background-color: rgb(255, 217, 217);
+}
+
+.bblock {
+    background-color: rgb(222, 222, 255);
+}
+
+.cblock {
+    background-color: rgb(255, 242, 226);
 }
 
 main {
@@ -29,34 +60,38 @@ header {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 45px;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
+    text-align: center;
 }
 
 h3 {
-    font-size: 17px;
+    font-size: 23px;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
+    text-align: center;
 }
 
 p {
-    font-size: 15px;
+    font-size: 20px;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
+    text-align: center;
+    
 }
 
 a {
-    font-size: 15px;
+    font-size: 20px;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -66,6 +101,13 @@ a {
 
 .logo {
     width: 100px;
-    float: right; 
+    float: left; 
     padding-right: 3%;
+    margin-top: 17px;
+    margin-right: -100px;
 }
+
+.text {
+    text-align: justify;
+}
+
