@@ -62,7 +62,6 @@ header {
 h1 {
     font-size: 45px;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
@@ -72,7 +71,6 @@ h1 {
 h3 {
     font-size: 23px;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
@@ -82,7 +80,6 @@ h3 {
 p {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
@@ -93,7 +90,6 @@ p {
 a {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
@@ -109,5 +105,10 @@ a {
 
 .text {
     text-align: justify;
+}
+
+.indy {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
