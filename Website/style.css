@@ -1,13 +1,14 @@
+/*Fixed map size*/
 .map {
     width: 600px;
 }
-
+/*Images - The ones on the left of each block page*/
 .placeholder {
     width: 50%;
     float: left;
     margin-right: 10px;
 }
-
+/*Navigation bar and styling */
 nav {
     background-color: rgb(236, 236, 236);
 }
@@ -26,7 +27,7 @@ nav a:hover {
     color: rgb(57, 45, 41);
     background-color: rgb(204, 204, 204);
 }
-
+/*Background of body*/
 body {
     background-color: rgb(189, 197, 198);
     margin-left: 10%;
@@ -45,12 +46,13 @@ body {
 .cblock {
     background-color: rgb(255, 242, 226);
 }
-
+/*Layout for main, header, and headings over all pages. */
 main {
     background-color: rgb(249, 254, 255);
     padding: 10px;
     min-width:600px;
-    min-height: 525px;
+    min-height: 600px;
+    margin-bottom: 100px;
 }
 
 header {
@@ -76,7 +78,7 @@ h3 {
     "wdth" 100;
     text-align: center;
 }
-
+/*Paragraph, link, and logo styling that carries over all pages*/
 p {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
@@ -102,11 +104,11 @@ a {
     margin-top: 17px;
     margin-right: -100px;
 }
-
+/*Text align for certain blocks of text*/
 .text {
     text-align: justify;
 }
-
+/*Classes certain text for styling*/
 .indy {
     margin-left: 10%;
     margin-right: 10%;
